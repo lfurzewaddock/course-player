@@ -1,18 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "course-player",
-  "version": "1.0.1",
-  "description": "An online course presentation engine with React.",
-  "main": "index.js",
-  "scripts": {
-    "start": "serve static",
-    "build": "NODE_PATH=source browserify source/index.js -o static/index.js -t [ babelify --presets [ es2015 react stage-2 ] ]",
-    "lint": "eslint .",
-    "test": "NODE_PATH=source babel-node source/test/index.js",
-    "watch": "watch 'clear && npm run -s test && npm run -s build' source",
-    "sync": "browser-sync start --server static --files 'static'",
-    "update": "updtr && depcheck --ignores='babelify'"
-=======
   "name": "code-exercise",
   "version": "1.0.0",
   "description": "Simple code exercises.",
@@ -23,7 +9,6 @@
     "lint": "eslint source",
     "test": "babel-node source/test/index.js",
     "watch": "watch 'clear && npm run -s lint && npm run -s test && npm run -s build' source"
->>>>>>> 7192d17... Setup code.
   },
   "repository": {
     "type": "git",
@@ -36,28 +21,6 @@
   },
   "homepage": "https://github.com/jshomes/code-exercise#readme",
   "dependencies": {
-<<<<<<< HEAD
-    "react": "15.3.2",
-    "react-dom": "15.3.2"
-  },
-  "devDependencies": {
-    "babel-cli": "6.16.0",
-    "babel-eslint": "7.0.0",
-    "babel-preset-es2015": "6.16.0",
-    "babel-preset-react": "6.16.0",
-    "babel-preset-stage-2": "6.17.0",
-    "babelify": "7.3.0",
-    "browser-sync": "2.17.3",
-    "browserify": "13.1.0",
-    "cheerio": "0.22.0",
-    "depcheck": "0.6.4",
-    "eslint": "3.7.1",
-    "eslint-plugin-react": "6.4.1",
-    "serve": "1.4.0",
-    "tape": "4.6.2",
-    "updtr": "0.2.1",
-    "watch": "1.0.1"
-=======
     "brace": "0.7.0",
     "browserify": "13.0.0",
     "react": "0.14.7"
@@ -72,6 +35,5 @@
     "serve": "1.4.0",
     "tape": "4.5.1",
     "watch": "0.17.1"
->>>>>>> 7192d17... Setup code.
   }
 }

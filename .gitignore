@@ -2,7 +2,3 @@
 node_modules
 npm-debug.log
 build
-<<<<<<< HEAD
-static/index.js
-=======
->>>>>>> 7192d17... Setup code.
