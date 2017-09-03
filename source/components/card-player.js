@@ -6,7 +6,7 @@ export default React => {
 
   const CardListItem = ({card, currentCardId}) => (
     <li key={card.id}
-     className={ makeClasses('card-list-item',
+      className={ makeClasses('card-list-item',
       card.id === currentCardId ? 'current-card' : '')
     }>{ card.name }</li>
   );
@@ -25,7 +25,7 @@ export default React => {
       <ul className="card-list">
         {
           cardsList.map(card => {
-            return CardListItem({ card, currentCardId } );
+            return CardListItem({ card, currentCardId });
           })
         }
       </ul>
