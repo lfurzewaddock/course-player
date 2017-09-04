@@ -17,7 +17,11 @@ export default React => {
       <div className="card-container">
         <div className="card-content">{ cardContent }</div>
         <div className="next-card"><div className="spacer"></div>
-          <button className="button" disabled={ !isCompleted }>Continue</button>
+          <button className={ makeClasses(
+            'button btn',
+            isCompleted ? 'btn-success' : ''
+           ) }
+           disabled={ !isCompleted }>Continue</button>
         </div>
       </div>
       <ul className="card-list">

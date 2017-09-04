@@ -123,8 +123,26 @@ test('CardPlayer', nest => {
     assert.equal(actual, expected, msg);
     assert.end();
   });
+  nest.test('...next-card btn class', assert => {
+    const msg = 'next-card should render the button class';
+
+    // Inject React into the factory to enable loading React from a CDN,
+    // which may be cached, to boost performance and support multiple versions.
+    const CardPlayer = cardPlayer(React);
+
+    const props = makeProps();
+
+    const $ = shallow(<CardPlayer { ...props } />);
+    const output = $.find('.button').hasClass('btn');
+
+    const actual = output;
+    const expected = true;
+
+    assert.equal(actual, expected, msg);
+    assert.end();
+  });
   nest.test('...next-card', assert => {
-    const msg = 'nex-card should render a disabled button by default.';
+    const msg = 'next-card should render a disabled button by default.';
 
     // Inject React into the factory to enable loading React from a CDN,
     // which may be cached, to boost performance and support multiple versions.
@@ -142,7 +160,7 @@ test('CardPlayer', nest => {
     assert.end();
   });
   nest.test('...next-card with card completed', assert => {
-    const msg = 'nex-card should render a working continue button.';
+    const msg = 'next-card should render a working continue button.';
 
     // Inject React into the factory to enable loading React from a CDN,
     // which may be cached, to boost performance and support multiple versions.
@@ -155,6 +173,24 @@ test('CardPlayer', nest => {
 
     const actual = output;
     const expected = false;
+
+    assert.equal(actual, expected, msg);
+    assert.end();
+  });
+  nest.test('...next-card with card completed', assert => {
+    const msg = 'next-card should render the button success class.';
+
+    // Inject React into the factory to enable loading React from a CDN,
+    // which may be cached, to boost performance and support multiple versions.
+    const CardPlayer = cardPlayer(React);
+
+    const props = makeProps({ isCompleted: true });
+
+    const $ = shallow(<CardPlayer { ...props } />);
+    const output = $.find('.button').hasClass('btn-success');
+
+    const actual = output;
+    const expected = true;
 
     assert.equal(actual, expected, msg);
     assert.end();
